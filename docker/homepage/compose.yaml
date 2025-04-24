@@ -3,12 +3,17 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     environment:
-      HOMEPAGE_ALLOWED_HOSTS: gethomepage.dev # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
-      PUID: 1000 # optional, your user id
-      PGID: 1000 # optional, your group id
+      HOMEPAGE_ALLOWED_HOSTS: 192.168.1.88:3000 # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
     ports:
       - 3000:3000
     volumes:
-      - /path/to/config:/app/config # Make sure your local config directory exists
-      - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
+      - /DATA/homepage/config:/app/config
+      - /DATA/homepage/images:/app/images
+      - /DATA/homepage/icons:/app/icons
     restart: unless-stopped
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
