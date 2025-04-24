@@ -1,0 +1,17 @@
+services:
+  filebrowser:
+    image: filebrowser/filebrowser
+    container_name: filebrowser-rodrigo
+    volumes:
+      - /DATA/rodrigo/foundrydata:/srv
+      - /DATA/rodrigo/filebrowser/filebrowser.db:/database.db
+      - /DATA/rodrigo/filebrowser/.filebrowser.json:/.filebrowser.json
+    ports:
+      - 30002:80
+    networks:
+      - homelab
+    restart: unless-stopped
+
+networks:
+  homelab:
+    external: true

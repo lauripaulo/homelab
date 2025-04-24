@@ -5,7 +5,7 @@ services:
     volumes:
       - /DATA/dashy/my-config.yml:/app/user-data/conf.yml
     ports:
-      - 8080:8080
+      - 80:8080
     networks:
       - homelab
     environment:
