@@ -102,6 +102,13 @@ services:
       - "/srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/storage:/photoprism/storage"          # *Writable* storage folder for cache, database, and sidecar files (DO NOT REMOVE)
       # - "/example/family:/photoprism/originals/family" # *Additional* media folders can be mounted like this
       # "/host/folder:/photoprism/folder"                # Example
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: "nvidia"
+              count: 1
+              capabilities: [gpu]
 
   ## Watchtower upgrades services automatically (optional)
   ## see https://docs.photoprism.app/getting-started/updates/#watchtower
