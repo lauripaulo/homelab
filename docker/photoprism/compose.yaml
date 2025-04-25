@@ -29,6 +29,7 @@ services:
     image: photoprism/photoprism:latest
     restart: unless-stopped
     stop_grace_period: 10s
+    container_name: photoprism
     networks:
       - homelab
     security_opt:
