@@ -1,0 +1,21 @@
+services:
+  duckdns:
+    image: lscr.io/linuxserver/duckdns:latest
+    container_name: duckdns
+    networks: 
+      - homelab
+    environment:
+      - PUID=0
+      - PGID=100
+      - TZ=BR
+      - SUBDOMAINS=${DUCKDNS_SUBDOMAINS}
+      - TOKEN=${DUCKDNS_TOKEN}
+      - UPDATE_IP=ipv4
+      - LOG_FILE=true
+    volumes:
+      - /DATA/duckdns/config:/config
+    restart: unless-stopped
+
+networks:
+  homelab:
+    external: true
