@@ -19,7 +19,6 @@ services:
     volumes:
       # Do not edit the next line. If you want to change the media storage location on your system, edit the value of IMMICH_UPLOAD_LOCATION in the .env file
       - /srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/immich/upload:/usr/src/app/upload
-      - /srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/immich/import:/import
       - /etc/localtime:/etc/localtime:ro
     ports:
       - 2283:2283
