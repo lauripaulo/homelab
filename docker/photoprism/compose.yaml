@@ -37,6 +37,7 @@ services:
       - apparmor:unconfined
     ports:
       - "2342:2342"
+    command: sh -c "sleep 10 && photoprism start"
     environment:
       PHOTOPRISM_ADMIN_USER: "admin"
       PHOTOPRISM_ADMIN_PASSWORD: "insecure"
