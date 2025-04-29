@@ -87,9 +87,9 @@ services:
       - "/dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools"
     working_dir: "/photoprism"
     volumes:
-      - "/srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/originals:/photoprism/originals"
-      - "/srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/import:/photoprism/import"
-      - "/srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/storage:/photoprism/storage"
+      - "/srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/photoprism/originals:/photoprism/originals"
+      - "/srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/photoprism/import:/photoprism/import"
+      - "/srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/photoprism/storage:/photoprism/storage"
     deploy:
       resources:
         reservations:
