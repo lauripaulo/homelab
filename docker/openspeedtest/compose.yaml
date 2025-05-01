@@ -1,0 +1,16 @@
+# openspeedtest instance
+
+services:
+  speedtest:
+    restart: unless-stopped
+    container_name: openspeedtest
+    ports:
+      - "3100:3000"
+      - "3101:3001"
+    image: openspeedtest/latest
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
