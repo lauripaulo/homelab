@@ -14,8 +14,8 @@ services:
       - "/dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /srv/raid/share/frigate/config:/config
-      - /srv/raid/share/frigate/storage:/media/frigate
+      - /srv/raid/frigate/config:/config
+      - /srv/raid/frigate/storage:/media/frigate
       - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
         target: /tmp/cache
         tmpfs:
@@ -30,7 +30,6 @@ services:
       FRIGATE_RTSP_PASSWORD: "password"
     networks:
       - homelab
-    user: "1001:100"
     deploy:
       resources:
         reservations:
