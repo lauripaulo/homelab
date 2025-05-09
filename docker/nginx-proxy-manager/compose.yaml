@@ -5,8 +5,8 @@ services:
     restart: unless-stopped
     ports:
       # These ports are in format <host-port>:<container-port>
-      - '2080:80' # Public HTTP Port
-      - '2443:443' # Public HTTPS Port
+      - '80:80' # Public HTTP Port
+      - '443:443' # Public HTTPS Port
       - '2081:81' # Admin Web Port
       # Add any other Stream port you want to expose
       # - '21:21' # FTP
