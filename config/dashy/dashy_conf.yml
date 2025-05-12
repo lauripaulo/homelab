@@ -1,0 +1,264 @@
+appConfig:
+  language: pt
+  layout: horizontal
+  iconSize: large
+  theme: nord-frost
+pageInfo:
+  title: Dashy
+sections:
+  - name: Megaserver (192.168.1.88 - Debian 12)
+    icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/amd-light.svg
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_0
+        title: Portainer
+        description: Gerenciador de containers
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/portainer.svg
+        url: https://portainer.baenalaux.duckdns.org
+        target: newtab
+        statusCheck: true
+        id: 0_2587_portainer
+      - &ref_1
+        title: Webmin
+        description: Painel de controle
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/webmin.svg
+        url: https://webmin.baenalaux.duckdns.org
+        target: newtab
+        id: 1_2587_webmin
+      - &ref_2
+        title: Openmediavault
+        description: NAS manager
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openmediavault.svg
+        url: https://omv.baenalaux.duckdns.org/#/login
+        target: newtab
+        id: 2_2587_openmediavault
+      - &ref_3
+        title: Minio S3 Object Store
+        description: 'Cloud-native object store '
+        icon: >-
+          https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF67HYhkpxJguOkBM59Udsy2tbNb29cYsSjpwrA4CEtnkO4xIxbrPKMdA0e2t5abo6OYc&usqp=CAU
+        url: https://objstore.baenalaux.duckdns.org/login
+        id: 3_2587_miniosobjectstore
+      - &ref_4
+        title: Nextcloud (Config)
+        description: Configuração do Nextcloud
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud-blue.svg
+        url: https://nextcloud-admin.duckdns.org/login
+        target: newtab
+        id: 4_2587_nextcloudconfig
+      - &ref_5
+        title: Nextcloud (Prod)
+        description: Interface web do Nextcloud
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud.svg
+        url: https://nextcloud.baenalaux.org/
+        target: newtab
+        id: 5_2587_nextcloudprod
+      - &ref_6
+        title: Foundry (Rodrigo)
+        description: Servidor do FoundryVTT para o Rodrigo.
+        icon: >-
+          https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp7ae8zpOKzacqKFRzUmFxsLK4Rwlyq2oXekd3s9Qq6qOPU7jbbTqE6OhS91Z_O4i7nzQ&usqp=CAU
+        url: https://foundry-rodrigo.baenalaux.org
+        target: newtab
+        displayData: 'passwd: AventurasBemLegais0000nline'
+        id: 6_2587_foundryrodrigo
+      - &ref_7
+        title: Foundry (Junior)
+        description: Servidor do FoundryVTT para o Junior
+        icon: https://avatars.githubusercontent.com/u/106610688?s=280&v=4
+        url: https://foundry.baenalaux.org/
+        target: newtab
+        id: 7_2587_foundryjunior
+      - &ref_8
+        title: Syncthing MegaServer
+        description: >-
+          Syncthing replaces proprietary sync and cloud services with something
+          open, trustworthy and decentralized.
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/syncthing.svg
+        url: https://sync.baenalaux.duckdns.org/
+        target: newtab
+        id: 8_2587_syncthingmegaserver
+      - &ref_9
+        title: Immich
+        description: Self-hosted photo and video management solution
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/immich.svg
+        url: https://immich.baenalaux.duckdns.org
+        target: newtab
+        id: 9_2587_immich
+      - &ref_10
+        title: Openspeedtest
+        description: Teste de velocidade de rede
+        icon: >-
+          https://play-lh.googleusercontent.com/ViUMpIIYsqMfDKISQE2EdhUwscet8KD0dUXl-fx4X1OM2xEIGHmGLw4HIPMStNDxitGW=w240-h480-rw
+        url: https://speedtest.baenalaux.duckdns.org
+        target: newtab
+        id: 10_2587_openspeedtest
+      - &ref_11
+        title: Stirling PDF
+        description: >-
+          Stirling-PDF⁠ is a robust, locally hosted web-based PDF manipulation
+          tool using Docker
+        icon: https://avatars.githubusercontent.com/u/139791695?v=4
+        url: https://pdf.baenalaux.duckdns.org/?lang=pt_BR
+        id: 11_2587_stirlingpdf
+      - &ref_12
+        title: Crafty (Minecraft)
+        description: Minecraft server manager
+        icon: >-
+          https://static-00.iconduck.com/assets.00/minecraft-icon-512x512-8mie91i2.png
+        url: https://crafty.baenalaux.duckdns.org/
+        target: newtab
+        id: 12_2587_craftyminecraft
+      - &ref_13
+        title: NGINX Proxy Manager
+        description: Expose your services easily and securely
+        icon: https://nginxproxymanager.com/logo.svg
+        url: https://nginx.baenalaux.duckdns.org/
+        id: 13_2587_nginxproxymanager
+      - &ref_14
+        title: SFTPGo Admin
+        description: >-
+          SFTPGo is an event-driven file transfer solution. It support multiple
+          protocols (SFTP, SCP, FTP/S, WebDAV, HTTP/S) and multiple storage
+          backends.
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/sftpgo.png
+        url: https://sftpgo.baenalaux.duckdns.org/web/admin/users
+        target: newtab
+        id: 14_2587_sftpgoadmin
+      - &ref_15
+        title: SFTPGo Client
+        description: SFTPGo is an event-driven file transfer solution
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/sftpgo.png
+        url: https://sftpgo.baenalaux.duckdns.org/
+        target: newtab
+        id: 15_2587_sftpgoclient
+    filteredItems:
+      - *ref_0
+      - *ref_1
+      - *ref_2
+      - *ref_3
+      - *ref_4
+      - *ref_5
+      - *ref_6
+      - *ref_7
+      - *ref_8
+      - *ref_9
+      - *ref_10
+      - *ref_11
+      - *ref_12
+      - *ref_13
+      - *ref_14
+      - *ref_15
+  - name: Homelab (192.168.1.89 - Ubuntu Server 24.04)
+    icon: >-
+      https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR627SjZh-jwQuJSVrTbyd8xwq9MZiCZO_zzw&s
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_16
+        title: Webmin
+        description: Powerful and flexible web-based server management control panel.
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/webmin.svg
+        url: https://webmin-homelab.baenalaux.duckdns.org
+        target: newtab
+        id: 0_3119_webmin
+      - &ref_17
+        title: Portainer
+        description: Gerenciador de containers
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/portainer.svg
+        url: https://portainer-homelab.baenalaux.duckdns.org
+        target: newtab
+        id: 1_3119_portainer
+      - &ref_18
+        title: Cockpit
+        description: >-
+          Cockpit is a web-based graphical interface for servers, intended for
+          everyone, especially those who are:
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/cockpit-light.svg
+        url: https://cockpit-homelab.baenalaux.duckdns.org
+        target: newtab
+        id: 2_3119_cockpit
+      - &ref_19
+        title: Frigate
+        description: NVR on steroids
+        icon: >-
+          https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwMfG0dPhhL-k-8EBl-x_ONIjQACG3SfAgzWaVLlW1dyEJIruUcAPKdSenSy6IHRpBmWg&usqp=CAU
+        url: https://frigate-homelab.baenalaux.duckdns.org
+        target: newtab
+        id: 3_3119_frigate
+      - &ref_20
+        title: OpenSpeedTest
+        description: Teste de velocidade de rede
+        icon: >-
+          https://play-lh.googleusercontent.com/ViUMpIIYsqMfDKISQE2EdhUwscet8KD0dUXl-fx4X1OM2xEIGHmGLw4HIPMStNDxitGW=w240-h480-rw
+        url: https://speedtest-homelab.baenalaux.duckdns.org/
+        target: newtab
+        id: 4_3119_openspeedtest
+    filteredItems:
+      - *ref_16
+      - *ref_17
+      - *ref_18
+      - *ref_19
+      - *ref_20
+  - name: MegaPi (192.168.1.80 - RaspOS)
+    icon: https://img.icons8.com/?size=512&id=13443&format=png
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_21
+        title: Pi Hole
+        description: >-
+          Network-level blocking allows you to block ads in non-traditional
+          places such as mobile apps and smart TVs, regardless of hardware or
+          OS.
+        icon: https://upload.wikimedia.org/wikipedia/en/1/15/Pi-hole_vector_logo.svg
+        url: https://pihole-megapi.baenalaux.duckdns.org/admin/login
+        target: newtab
+        id: 0_1959_pihole
+      - &ref_22
+        title: Webmin
+        description: Powerful and flexible web-based server management control panel.
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/webmin.svg
+        url: https://webmin-megapi.baenalaux.duckdns.org/
+        id: 1_1959_webmin
+      - &ref_23
+        title: OpenSpeedTest
+        description: Teste de velocidade de rede
+        icon: >-
+          https://play-lh.googleusercontent.com/ViUMpIIYsqMfDKISQE2EdhUwscet8KD0dUXl-fx4X1OM2xEIGHmGLw4HIPMStNDxitGW=w240-h480-rw
+        url: https://speedtest-megapi.baenalaux.duckdns.org/
+        target: newtab
+        id: 2_1959_openspeedtest
+      - &ref_24
+        title: Portainer
+        description: Gerenciador de containers
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/portainer.svg
+        url: https://portainer-megapi.baenalaux.duckdns.org/
+        target: newtab
+        id: 3_1959_portainer
+    filteredItems:
+      - *ref_21
+      - *ref_22
+      - *ref_23
+      - *ref_24
