@@ -20,3 +20,6 @@ sleep 10                        # Wait for Postgres server to start up
 gunzip --stdout "/srv/dev-disk-by-uuid-e687fe5d-e5e0-4df4-af90-6bdf5c26cc51/backup/photos/immich/upload/backups/immich-db-backup-1747015200004.sql.gz" \
 | sed "s/SELECT pg_catalog.set_config('search_path', '', false);/SELECT pg_catalog.set_config('search_path', 'public, pg_catalog', true);/g" \
 | docker exec -i immich_database psql --dbname=postgres --username=postgres  # Restore Backup
+
+# To backup the database, run the following command:
+# docker exec -t immich_database pg_dumpall --clean --if-exists --username=postgres | gzip > "/srv/dev-disk-by-uuid-e687fe5d-e5e0-4df4-af90-6bdf5c26cc51/backup-rsync/postgresql-db-immich/dump-immich.sql.gz"
