@@ -11,7 +11,8 @@ services:
     volumes:
       - /DATA/syncthing/config:/config
       - /DATA/syncthing/storage:/storage
-      - /srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/share/syncthing:/nas
+      - /srv/dev-disk-by-uuid-c4527509-4f74-4020-9033-99a1385a279d/syncthing:/nas
+      - /srv/dev-disk-by-uuid-c4527509-4f74-4020-9033-99a1385a279d/photos:/photos
     ports:
       - 8384:8384
       - 22000:22000/tcp

@@ -11,7 +11,7 @@ services:
     volumes:
       - /DATA/sftpgo/data:/srv/sftpgo
       - /DATA/sftpgo/home:/var/lib/sftpgo
-      - /srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/share/sftpgo:/nas
+      - /srv/dev-disk-by-uuid-c4527509-4f74-4020-9033-99a1385a279d/nas/sftpgo:/nas
     environment:
       - SFTPGO_HTTPD__BINDINGS__0__PORT=8080
       - SFTPGO_HTTPD__BINDINGS__0__ADDRESS=0.0.0.0

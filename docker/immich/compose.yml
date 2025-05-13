@@ -18,7 +18,7 @@ services:
       service: nvenc # set to one of [nvenc, quicksync, rkmpp, vaapi, vaapi-wsl] for accelerated transcoding
     volumes:
       # Do not edit the next line. If you want to change the media storage location on your system, edit the value of IMMICH_UPLOAD_LOCATION in the .env file
-      - /srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/immich/upload:/usr/src/app/upload
+      - /srv/dev-disk-by-uuid-c4527509-4f74-4020-9033-99a1385a279d/photos/immich/upload:/usr/src/app/upload
       - /etc/localtime:/etc/localtime:ro
     ports:
       - 2283:2283
@@ -46,7 +46,7 @@ services:
       file: hwaccel.ml.yml
       service: cuda # set to one of [armnn, cuda, rocm, openvino, openvino-wsl, rknn] for accelerated inference - use the `-wsl` version for WSL2 where applicable
     volumes:
-      - /srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/immich/model-cache:/cache
+      - /srv/dev-disk-by-uuid-c4527509-4f74-4020-9033-99a1385a279d/photos/immich/model-cache:/cache
     restart: always
     healthcheck:
       disable: false
@@ -72,7 +72,7 @@ services:
       POSTGRES_DB: "postgres"
       POSTGRES_INITDB_ARGS: '--data-checksums'
     volumes:
-      - /srv/dev-disk-by-uuid-38cbe0e2-59ff-4d0b-a788-90f676f157a4/photos/immich/postgres:/var/lib/postgresql/data
+      - /srv/dev-disk-by-uuid-c4527509-4f74-4020-9033-99a1385a279d/photos/immich/postgres:/var/lib/postgresql/data
     ports:
       - 5432:5432
     healthcheck:
