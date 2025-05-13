@@ -22,4 +22,4 @@ gunzip --stdout "/srv/dev-disk-by-uuid-e687fe5d-e5e0-4df4-af90-6bdf5c26cc51/back
 | docker exec -i immich_database psql --dbname=postgres --username=postgres  # Restore Backup
 
 # To backup the database, run the following command:
-# docker exec -t immich_database pg_dumpall --clean --if-exists --username=postgres | gzip > "/srv/dev-disk-by-uuid-e687fe5d-e5e0-4df4-af90-6bdf5c26cc51/backup-rsync/postgresql-db-immich/dump-immich.sql.gz"
+# docker exec -t immich_database pg_dumpall --clean --if-exists --username=postgres | gzip > "/srv/dev-disk-by-uuid-e687fe5d-e5e0-4df4-af90-6bdf5c26cc51/backup-rsync/postgresql-db-immich/dump-immich-$(date +%Y-%m-%d).sql.gz"
