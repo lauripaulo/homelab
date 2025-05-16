@@ -9,7 +9,7 @@ docker compose down -v  # CAUTION! Deletes all Immich data to start from scratch
 
 ## Uncomment the next line and replace DB_DATA_LOCATION with your Postgres path to permanently reset the Postgres database
 ## CAUTION! Deletes all Immich data to start from scratch
-rm -rf /srv/dev-disk-by-uuid-c4527509-4f74-4020-9033-99a1385a279d/photos/immich/postgres
+rm -rf /srv/main-raid/photos/immich/postgres
 
 docker compose pull             # Update to latest version of Immich (if desired)
 docker compose create           # Create Docker containers for Immich apps without running them
