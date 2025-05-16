@@ -1,0 +1,19 @@
+services:
+
+  couchdb:
+    image: couchdb:3.5.0
+    container_name: couchdb
+    restart: always
+    ports:
+     - 5984:5984
+    volumes:
+     - /DATA/couchdb/data:/opt/couchdb/data
+     - /DATA/couchdb/config:/opt/couchdb/etc/local.d
+     - /DATA/couchdb/log:/opt/couchdb/var/log
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: ${COUCHDB_PASSWORD}
+
+networks:
+  homelab:
+    external: true
