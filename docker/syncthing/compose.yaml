@@ -5,14 +5,13 @@ services:
     container_name: syncthing
     hostname: syncthing
     environment:
-      - PUID=0
+      - PUID=1000
       - PGID=100
       - TZ=Etc/UTC
     volumes:
       - /DATA/syncthing/config:/config
       - /DATA/syncthing/storage:/storage
-      - /srv/main-raid/syncthing:/nas
-      - /srv/main-raid/photos:/photos
+      - /srv/main-raid/syncthing:/main-raid
     ports:
       - 8384:8384
       - 22000:22000/tcp
