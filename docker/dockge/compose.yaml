@@ -1,0 +1,24 @@
+services:
+  dockge:
+    image: louislam/dockge:latest
+    container_name: dockge
+    restart: unless-stopped
+    ports:
+      # Host Port : Container Port
+      - 5001:5001
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /DATA/dockge/data:/app/data
+      # If you want to use private registries, you need to share the auth file with Dockge:
+      - /root/.docker/:/root/.docker
+      # Stacks Directory
+      - /DATA/dockge/stacks:/opt/stacks
+    environment:
+      # Tell Dockge where is your stacks directory
+      - DOCKGE_STACKS_DIR=/opt/stacks
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
