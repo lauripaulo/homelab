@@ -7,6 +7,8 @@ then
 	exit
 fi
 echo "Preparing folder init and creating /DATA/guacamole/init/initdb.sql"
+mkdir /DATA >/dev/null 2>&1
+mkdir /DATA/guacamole >/dev/null 2>&1
 mkdir /DATA/guacamole/init >/dev/null 2>&1
 mkdir -p /DATA/guacamole/nginx/ssl >/dev/null 2>&1
 chmod -R +x /DATA/guacamole/init
