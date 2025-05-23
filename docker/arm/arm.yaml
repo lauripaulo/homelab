@@ -249,10 +249,10 @@ HANDBRAKE_LOCAL: HandBrakeCLI
 MAINFEATURE: false
 
 # Additional HandBrake arguments for DVDs.
-HB_ARGS_DVD: "--subtitle scan -F --subtitle-lang-list por,eng --all-subtitles --quality=22 --encoder-preset=quality"
+HB_ARGS_DVD: "--subtitle scan -F --subtitle-lang-list por,eng --all-subtitles --quality=18 --encoder-preset=quality"
 
 # Additional Handbrake arguments for Bluray Discs.
-HB_ARGS_BD: "--subtitle scan -F --subtitle-burned --audio-lang-list eng --all-audio --subtitle-lang-list por,eng --all-subtitles --quality=22 --encoder-preset=quality"
+HB_ARGS_BD: "--subtitle scan -F --subtitle-burned --audio-lang-list eng --all-audio --subtitle-lang-list por,eng --all-subtitles --quality=18 --encoder-preset=quality"
 
 
 #####################
