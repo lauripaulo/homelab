@@ -18,10 +18,12 @@ services:
       - "/dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /srv/raid/arm/config:/etc/arm/config
-      - /srv/raid/arm/music:/home/arm/music
-      - /srv/raid/arm/logs:/home/arm/logs
-      - /srv/raid/arm/media:/home/arm/media
+      - /DATA/arm/config:/etc/arm/config
+      - /DATA/arm/logs:/home/arm/logs
+      - /srv/raid/share/media:/home/arm/media
+      - /DATA/arm/media/raw:/home/arm/media/raw
+      - /DATA/arm/media/transcode:/home/arm/media/transcode
+      - /srv/raid/share/music:/home/arm/music
     ports:
       - "8182:8080"
     environment:
@@ -31,7 +33,7 @@ services:
       NVIDIA_DRIVER_CAPABILITIES: "all"
     networks:
       - homelab
-    cpuset: "0,1,2,3" # Adjust according to your CPU cores
+    cpuset: "0,1,2,3,4,5" # Adjust according to your CPU cores
     deploy:
       resources:
         reservations:
