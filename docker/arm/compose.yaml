@@ -22,6 +22,7 @@ services:
       - /DATA/arm/media/raw:/home/arm/media/raw
       - /DATA/arm/media/transcode:/home/arm/media/transcode
       - /srv/raid/share/music:/home/arm/music
+      - /DATA/arm/db:/home/arm/db
     ports:
       - "8182:8080"
     environment:
