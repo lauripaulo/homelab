@@ -1,0 +1,46 @@
+---
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - JELLYFIN_PublishedServerUrl=http://192.168.1.89 #optional
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - /home/lauri/jellyfin/config:/config
+      - /home/lauri/jellyfin/data/tvshows:/data/tvshows
+      - /home/lauri/jellyfin/data/movies:/data/movies
+      - /home/lauri/jellyfin/data/music:/data/music
+      - /home/lauri/arm/media/completed/movies:/data/arm-movies
+    ports:
+      - 8096:8096
+      - 8920:8920 #optional
+      - 7359:7359/udp #optional
+      - 1900:1900/udp #optional
+    devices:
+      - /dev/dri:/dev/dri #optional, for hardware acceleration
+      - /dev/nvidia0:/dev/nvidia0 #optional, for NVIDIA GPU
+      - /dev/nvidiactl:/dev/nvidiactl #optional, for NVIDIA GPU
+      - /dev/nvidia-modeset:/dev/nvidia-modeset #optional, for NVIDIA GPU
+      - /dev/nvidia-uvm:/dev/nvidia-uvm #optional, for NVIDIA GPU
+      - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools #optional, for NVIDIA GPU
+    restart: unless-stopped
+    networks:
+      - homelab
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities:
+                - gpu
+                - compute
+                - video
+
+networks:
+  homelab:
+    external: true
