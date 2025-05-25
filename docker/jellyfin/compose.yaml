@@ -11,10 +11,10 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
       - /home/lauri/jellyfin/config:/config
-      - /home/lauri/jellyfin/data/tvshows:/data/tvshows
-      - /home/lauri/jellyfin/data/movies:/data/movies
-      - /home/lauri/jellyfin/data/music:/data/music
-      - /home/lauri/arm/media/completed/movies:/data/arm-movies
+      - /srv/raid/share/media/tvshows:/data/tvshows
+      - /srv/raid/share/media/Movies:/data/movies
+      - /srv/raid/share/media/Music:/data/music
+      - /srv/raid/share/media/Movies-DVD:/data/arm-movies
     ports:
       - 8096:8096
       - 8920:8920 #optional
