@@ -26,8 +26,8 @@ services:
     ports:
       - "8182:8080"
     environment:
-      ARM_UID: "1000"
-      ARM_GID: "1000"
+      ARM_UID: "1002"
+      ARM_GID: "1001"
       TZ: "America/Sao_Paulo"
       NVIDIA_DRIVER_CAPABILITIES: "all"
     networks:
