@@ -1,0 +1,21 @@
+name: postgres
+
+services:
+  postgres-standalone:
+    container_name: postgres-standalone
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_DB_PASSWORD}
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - 6432:5432
+    networks:
+      - homelab
+    volumes:
+      - /DATA/postgres-standalone:/var/lib/postgresql/data
+
+networks:
+  homelab:
+    external: true

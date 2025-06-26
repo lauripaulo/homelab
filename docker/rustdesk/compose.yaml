@@ -2,11 +2,11 @@ services:
   hbbs:
     container_name: hbbs
     image: rustdesk/rustdesk-server:latest
-    # environment:
-    #   - ALWAYS_USE_RELAY=Y
+    environment:
+      - ALWAYS_USE_RELAY=Y
     command: hbbs
     volumes:
-      - /DATA/rustdesk/data:/root
+      - /DATA/rustdesk:/root
     network_mode: "host"
     depends_on:
       - hbbr
@@ -17,6 +17,6 @@ services:
     image: rustdesk/rustdesk-server:latest
     command: hbbr
     volumes:
-      - /DATA/rustdesk/data:/root
+      - /DATA/rustdesk:/root
     network_mode: "host"
     restart: unless-stopped
